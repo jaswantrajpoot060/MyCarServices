@@ -1,0 +1,79 @@
+﻿@model BusinessObject.Enquiry
+
+@{
+    ViewBag.Title = "Enquiry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h2 style="color:white; font-size:28px;">Enquiry</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="scrapcar-main-content">
+
+    <div class="scrapcar-main-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="scrapcar-get-quote-warp">
+                    @if (ViewBag.Msg != "")
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+                        </div>
+                    }
+                    <h2 class="scrapcar-section-headingv2">Share Your Enquiry</h2>
+
+                    @using (Html.BeginForm("Enquiry", "Home", FormMethod.Post, new { @class = "scrapcar-quote-about-us" }))
+                    {
+                        @Html.HiddenFor(m => m.Id)
+                        <ul>
+                            <li>
+                                <label>Name:*</label>
+                                @Html.TextBoxFor(m => m.Name, new { @class = "" })
+                                @Html.ValidationMessageFor(m => m.Name, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Email Address:*</label>
+                                @Html.TextBoxFor(m => m.Email, new { @class = "" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Phone Number:</label>
+                                @Html.TextBoxFor(m => m.Mobile, new { @class = "" })
+                                @Html.ValidationMessageFor(m => m.Mobile, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Your Location:</label>
+                                @Html.TextBoxFor(m => m.Locaton, new { @class = "" })
+                                @Html.ValidationMessageFor(m => m.Locaton, "", new { @style = "color:red" })
+                            </li>
+                        </ul>
+
+                        <div class="container col-md-12">
+                            @Html.TextAreaFor(m => m.Descripation, new { @rows = "6", @class = "form-control", @placeholder = "Additional Comment" })
+                            @Html.ValidationMessageFor(m => m.Descripation, "", new { @style = "color:red" })
+                            <br>
+                        </div>
+                   
+                        <input type="submit" value="Okay, Submit My Enquiry">
+                        <div style="color:red;">
+                            @ViewBag.ErrorMessage
+                        </div>
+
+                    }
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

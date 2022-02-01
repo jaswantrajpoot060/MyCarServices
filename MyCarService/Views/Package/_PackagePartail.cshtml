@@ -1,0 +1,75 @@
+﻿@model MyCarService.Models.MainModel
+@if (ViewBag.Msg != "")
+{
+    <div class="alert alert-success">
+        <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+    </div>
+}
+<table class="display table table-bordered table-striped" id="dynamic-table">
+    <thead>
+        <tr>
+            <th>SNo</th>
+            <th>Package Name</th>
+            <th>Duration</th>
+            <th>TraininerName</th>
+            <th>Price</th>
+            <th>Discription</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int SNo = 0;
+        }
+        @foreach (var item in Model.PackageList)
+        {
+            SNo++;
+        <tr class="gradeX">
+            <td>@SNo</td>
+            <td>@item.Name</td>
+            <td>@item.Duration</td>
+            <td>@item.TraininerName</td>
+            <td>@item.Price.ToString("0.00")</td>
+            <td>@item.Discription</td>
+            <td>
+                <a href="/Package/AddPackageImage?Id=@item.Id&RowId=@Guid.Empty" title="Edit Detail" class="btn btn-xs purple">
+                    <i class="fa fa-plus" style="color:blue;"></i>
+                </a>
+                <a href="/Package/AddPackage?Id=@item.Id" title="Edit Detail" class="btn btn-xs purple">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0)" onclick="DeletePackage('@item.Id')" class="btn btn-xs red">
+                    <i class="fa fa-times"></i>
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<script type="text/javascript">
+    function DeletePackage(Id) {
+        var result = confirm('are you sure?');
+        if (result) {
+            $.ajax({
+                url: '/Package/DeletePackage',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ Id: Id}),
+                async: true,
+                processData: false,
+                cache: false,
+                success: function (data) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(data);
+                },
+                error: function (xhr) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(xhr.responseText);
+                },
+                complete: function (data) {
+                }
+            });
+        }
+    }
+</script>

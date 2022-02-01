@@ -1,0 +1,63 @@
+﻿@model MyCarService.Models.MainModel
+@{
+    ViewBag.Title = "Add Package";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-10 center">
+                <section class="card">
+                    <header class="card-header">
+                        Basic Forms
+                    </header>
+                    <div class="card-body">
+                        @using (Html.BeginForm("Index", "Package", FormMethod.Post, new { @class = "" }))
+                        {
+                            <input type="hidden" id="Id" name="Id" value="@Model.Package.Id" />
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="@Model.Package.Name" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Traininer Name</label>
+                                    <input type="text" class="form-control" id="traininername" name="traininername" value="@Model.Package.TraininerName" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Duration</label>
+                                    <input type="text" class="form-control" id="duration" name="duration" value="@Model.Package.Duration" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Price</label>
+                                    <input type="text" class="form-control" id="price" name="price" onkeypress="return isNumberKey(event)" value="@Model.Package.Price" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" id="description" name="description" rows="6">@Model.Package.Discription</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/Package" class="btn btn-dark"> Back</a>
+                        }
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- page end-->
+    </section>
+</section>

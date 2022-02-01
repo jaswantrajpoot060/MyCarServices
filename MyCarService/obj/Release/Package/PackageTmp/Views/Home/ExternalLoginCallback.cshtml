@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Message";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h2 style="color:white; font-size:28px;">Message</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="scrapcar-main-content">
+    <div class="scrapcar-main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (ViewBag.Message != "")
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-close="alert"></button> @ViewBag.Message
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

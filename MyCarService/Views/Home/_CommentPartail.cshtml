@@ -1,0 +1,62 @@
+﻿@model MyCarService.Models.MainModel
+
+@foreach (var item in Model.CommentList.OrderBy(d => d.Code))
+{
+    <li>
+        <div class="thumb-list">
+            <figure><img alt="" src="@item.Extra1" style="height:45px; width:45px;"></figure>
+            <div class="text-holder">
+                <h6><small> @item.Name</small></h6>
+                <time class="post-date" datetime="2008-02-14 20:00">@item.CreatedOn.ToString("dd MMM yyyy hh:mm tt")</time>
+                <br />
+                <br />
+                <p>@item.Description</p>
+                <br />
+            </div>
+        </div>
+        @foreach (var ritem in Model.CommentReplyList.Where(s => s.CommentId == item.Id).OrderBy(d => d.Code))
+        {
+            <ul class="children">
+                @foreach (var reitem in Model.CommentReplyList.Where(s => s.CommentId == item.Id).OrderBy(d => d.Code))
+                {
+                    <li>
+                        <div class="thumb-list">
+                            <figure><img alt="" src="@item.Extra1" style="height:45px; width:45px;"></figure>
+                            <div class="text-holder">
+                                <h6><small> @item.Name</small></h6>
+                                <br />
+                                <br />
+                                <time class="post-date" style="margin-top: -30px; ">@reitem.CreatedOn.ToString("dd MMM yyyy hh:mm tt")</time>
+                                <p>@reitem.Description</p>
+                                @*<a class="comment-reply-link" href="#"><i class="fa fa-reply"></i>Reply</a>*@
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+            break;
+        }
+        <div class="commentt-rrespond" id="hiddenReply_@item.Id">
+            <a class="comment-reply-link" href="javascript:void(0)" onclick="ShowReplybox('@item.Id')"><i class="fa fa-reply"></i>Reply</a>
+        </div>
+        <div class="comment-respond" id="cmdiv_@item.Id" style="display:none;">
+            <form id="data">
+                <p class="political-full-form">
+                    <label> Reply Comment:</label>
+                    <textarea id="comment_@item.Id" name="comment_@item.Id" style="height: 60px;" placeholder="Type Comment Your Reply" class="commenttextarea" required></textarea>
+                    <i class="fa fa-commenting"></i>
+                </p>
+                <p>
+                    <label>
+                        <a href="javascript:void(0)" class="btn btn-primary" id="replySave" onclick="CommentReply('@item.Id')">Send Now</a>
+                    </label>
+                </p>
+            </form>
+
+        </div>
+    </li>
+}
+<input type="hidden" id="lastreplyid" name="lastreplyid" value="" />
+<input type="hidden" id="lastreplyidbox" name="lastreplyidbox" value="" />
+
+

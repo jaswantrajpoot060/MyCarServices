@@ -1,0 +1,311 @@
+@font-face {
+    font-family: icomoon;
+    src: url(../assetsWeb/fonts/icomoon0b77.eot?j322hz);
+    src: url(../assetsWeb/fonts/icomoon0b77.eot?j322hz#iefix) format('embedded-opentype'),url(../assetsWeb/fonts/icomoon0b77.ttf?j322hz) format('truetype'),url(../assetsWeb/fonts/icomoon0b77.woff?j322hz) format('woff'),url(../assetsWeb/fonts/icomoon0b77.svg?j322hz#icomoon) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+.automechanic-icon {
+    font-family: icomoon !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.automechanic-file:before {
+    content: "\e900"
+}
+
+.automechanic-arrow:before {
+    content: "\e901"
+}
+
+.automechanic-play:before {
+    content: "\e902"
+}
+
+.automechanic-social-1:before {
+    content: "\e904"
+}
+
+.automechanic-social:before {
+    content: "\e905"
+}
+
+.automechanic-interface-1:before {
+    content: "\e906"
+}
+
+.automechanic-link:before {
+    content: "\e907"
+}
+
+.automechanic-arrows-2:before {
+    content: "\e908"
+}
+
+.automechanic-interface:before {
+    content: "\e909"
+}
+
+.automechanic-signs-1:before {
+    content: "\e90a"
+}
+
+.automechanic-multimedia-1:before {
+    content: "\e90b"
+}
+
+.automechanic-logo:before {
+    content: "\e90c"
+}
+
+.automechanic-signs:before {
+    content: "\e90d"
+}
+
+.automechanic-people-2:before {
+    content: "\e90e"
+}
+
+.automechanic-folder:before {
+    content: "\e90f"
+}
+
+.automechanic-arrows-1:before {
+    content: "\e910"
+}
+
+.automechanic-multimedia:before {
+    content: "\e911"
+}
+
+.automechanic-arrows:before {
+    content: "\e912"
+}
+
+.automechanic-coins:before {
+    content: "\e913"
+}
+
+.automechanic-tool:before {
+    content: "\e914"
+}
+
+.automechanic-people-1:before {
+    content: "\e915"
+}
+
+.automechanic-transport:before {
+    content: "\e916"
+}
+
+.automechanic-people:before {
+    content: "\e917"
+}
+
+.automechanic-vehicle:before {
+    content: "\e918"
+}
+
+.automechanic-power:before {
+    content: "\e919"
+}
+
+.automechanic-people-12:before {
+    content: "\e91a"
+}
+
+.automechanic-people2:before {
+    content: "\e91b"
+}
+
+.automechanic-arrows2:before {
+    content: "\e91c"
+}
+
+.automechanic-interface-12:before {
+    content: "\e91d"
+}
+
+.automechanic-squares:before {
+    content: "\e91e"
+}
+
+.automechanic-home:before {
+    content: "\e91f"
+}
+
+.automechanic-null-1:before {
+    content: "\e920"
+}
+
+.automechanic-clock2:before {
+    content: "\e921"
+}
+
+.automechanic-interface2:before {
+    content: "\e922"
+}
+
+.automechanic-location:before {
+    content: "\e923"
+}
+
+.automechanic-technology-12:before {
+    content: "\e924"
+}
+
+.automechanic-technology:before {
+    content: "\e925"
+}
+
+.automechanic-null:before {
+    content: "\e926"
+}
+
+.automechanic-search:before {
+    content: "\e927"
+}
+
+.automechanic-technology-1:before {
+    content: "\e928"
+}
+
+.automechanic-placeholder:before {
+    content: "\e929"
+}
+
+.automechanic-check:before {
+    content: "\e92a"
+}
+
+.automechanic-location-1:before {
+    content: "\e92b"
+}
+
+.automechanic-wrench:before {
+    content: "\e92c"
+}
+
+.automechanic-flickr:before {
+    content: "\e92d"
+}
+
+.automechanic-null2:before {
+    content: "\e92e"
+}
+
+.automechanic-technology2:before {
+    content: "\e92f"
+}
+
+.automechanic-clock-1:before {
+    content: "\e930"
+}
+
+.automechanic-location2:before {
+    content: "\e931"
+}
+
+.automechanic-circle:before {
+    content: "\e932"
+}
+
+.automechanic-transport-1:before {
+    content: "\e933"
+}
+
+.automechanic-tool-2:before {
+    content: "\e934"
+}
+
+.automechanic-rim:before {
+    content: "\e935"
+}
+
+.automechanic-car:before {
+    content: "\e936"
+}
+
+.automechanic-transport2:before {
+    content: "\e937"
+}
+
+.automechanic-mechanic:before {
+    content: "\e938"
+}
+
+.automechanic-tool-1:before {
+    content: "\e939"
+}
+
+.automechanic-shape:before {
+    content: "\e93a"
+}
+
+.automechanic-tool2:before {
+    content: "\e93b"
+}
+
+.automechanic-clock:before {
+    content: "\e93c"
+}
+
+.automechanic-signs22:before {
+    content: "\eb44"
+}
+
+.automechanic-squares2:before {
+    content: "\eb45"
+}
+
+.automechanic-map-location:before {
+    content: "\eb6e"
+}
+
+.automechanic-mark2:before {
+    content: "\eb73"
+}
+
+.automechanic-map3:before {
+    content: "\eb76"
+}
+
+.automechanic-tool4:before {
+    content: "\eb7d"
+}
+
+.automechanic-buildings2:before {
+    content: "\eb92"
+}
+
+.automechanic-arrows32:before {
+    content: "\eb60"
+}
+
+.automechanic-arrows22:before {
+    content: "\eb2d"
+}
+
+.automechanic-arrows4:before {
+    content: "\eaef"
+}
+
+.automechanic-office:before {
+    content: "\e903"
+}
+
+.automechanic-arrow-right2:before {
+    content: "\ea3c"
+}
+
+.automechanic-arrow-left2:before {
+    content: "\ea40"
+}

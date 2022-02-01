@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrivingSchool_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="Location" Type="varchar" MaxLength="250" />
+    <Property Name="Role" Type="varchar" MaxLength="250" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="ExtraColumn" Type="varchar" MaxLength="250" />
+    <Property Name="Signatue" Type="varchar" MaxLength="250" />
+    <Property Name="NewExtra" Type="varchar" MaxLength="500" />
+    <Property Name="NewExtra2" Type="varchar" MaxLength="500" />
+    <Property Name="Extra1" Type="varchar" MaxLength="250" />
+    <Property Name="Extra2" Type="varchar" MaxLength="250" />
+    <Property Name="Extra3" Type="varchar" MaxLength="250" />
+    <Property Name="Extra4" Type="varchar" MaxLength="250" />
+    <Property Name="Extra5" Type="varchar" MaxLength="250" />
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="varchar" MaxLength="250" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="Role" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="DrivingSchool_DBModelStoreContainer">
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

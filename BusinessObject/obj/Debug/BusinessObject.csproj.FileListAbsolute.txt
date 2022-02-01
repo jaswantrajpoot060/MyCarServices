@@ -1,0 +1,12 @@
+E:\My Projects\MyCarService\BusinessObject\bin\Debug\BusinessObject.dll
+E:\My Projects\MyCarService\BusinessObject\bin\Debug\BusinessObject.pdb
+E:\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.csproj.CoreCompileInputs.cache
+E:\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.dll
+E:\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.pdb
+E:\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.csproj.AssemblyReference.cache
+D:\My MVC Project\My Projects\MyCarService\BusinessObject\bin\Debug\BusinessObject.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessObject\bin\Debug\BusinessObject.pdb
+D:\My MVC Project\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.csproj.AssemblyReference.cache
+D:\My MVC Project\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.csproj.CoreCompileInputs.cache
+D:\My MVC Project\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessObject\obj\Debug\BusinessObject.pdb

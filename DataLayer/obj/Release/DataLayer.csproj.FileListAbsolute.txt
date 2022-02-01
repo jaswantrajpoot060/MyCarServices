@@ -1,0 +1,13 @@
+E:\My Projects\MyCarService\DataLayer\bin\Release\DataLayer.dll
+E:\My Projects\MyCarService\DataLayer\bin\Release\DataLayer.pdb
+E:\My Projects\MyCarService\DataLayer\bin\Release\BusinessObject.dll
+E:\My Projects\MyCarService\DataLayer\bin\Release\BusinessObject.pdb
+E:\My Projects\MyCarService\DataLayer\obj\Release\DataLayer.csproj.AssemblyReference.cache
+E:\My Projects\MyCarService\DataLayer\obj\Release\DataLayer.csproj.CoreCompileInputs.cache
+E:\My Projects\MyCarService\DataLayer\obj\Release\DataLayer.csproj.CopyComplete
+E:\My Projects\MyCarService\DataLayer\obj\Release\DataLayer.dll
+E:\My Projects\MyCarService\DataLayer\obj\Release\DataLayer.pdb
+E:\My Projects\MyCarService\DataLayer\bin\Release\EntityFramework.dll
+E:\My Projects\MyCarService\DataLayer\bin\Release\EntityFramework.SqlServer.dll
+E:\My Projects\MyCarService\DataLayer\bin\Release\EntityFramework.xml
+E:\My Projects\MyCarService\DataLayer\bin\Release\EntityFramework.SqlServer.xml

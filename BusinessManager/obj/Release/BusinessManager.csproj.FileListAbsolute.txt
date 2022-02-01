@@ -1,0 +1,13 @@
+E:\My Projects\MyCarService\BusinessManager\bin\Release\BusinessManager.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Release\BusinessManager.pdb
+E:\My Projects\MyCarService\BusinessManager\bin\Release\BusinessObject.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Release\DataLayer.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Release\BusinessObject.pdb
+E:\My Projects\MyCarService\BusinessManager\bin\Release\DataLayer.pdb
+E:\My Projects\MyCarService\BusinessManager\obj\Release\BusinessManager.csproj.AssemblyReference.cache
+E:\My Projects\MyCarService\BusinessManager\obj\Release\BusinessManager.csproj.CoreCompileInputs.cache
+E:\My Projects\MyCarService\BusinessManager\obj\Release\BusinessManager.csproj.CopyComplete
+E:\My Projects\MyCarService\BusinessManager\obj\Release\BusinessManager.dll
+E:\My Projects\MyCarService\BusinessManager\obj\Release\BusinessManager.pdb
+E:\My Projects\MyCarService\BusinessManager\bin\Release\EntityFramework.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Release\EntityFramework.xml

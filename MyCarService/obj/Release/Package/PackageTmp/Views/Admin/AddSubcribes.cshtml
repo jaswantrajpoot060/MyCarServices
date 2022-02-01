@@ -1,0 +1,51 @@
+﻿@model MyCarService.Models.MainModel
+@{
+    ViewBag.Title = "Add Subcribes";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-10 center">
+                <section class="card">
+                    <header class="card-header">
+                        Subcribes Users
+                    </header>
+                    <div class="card-body">
+                        @using (Html.BeginForm("Subcribes", "Admin", FormMethod.Post, new { @class = "" }))
+                        {
+                            <input type="hidden" id="Id" name="Id" value="@Model.Subcribes.Id" />
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="@Model.Subcribes.Name" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Email</label>
+                                    <input type="text" class="form-control" id="email" name="email" value="@Model.Subcribes.Email" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Mobile</label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile" onkeypress="return isNumberKey(event)" value="@Model.Subcribes.Mobile" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/Admin/Subcribes" class="btn btn-dark"> Back</a>
+                        }
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- page end-->
+    </section>
+</section>

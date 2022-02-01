@@ -1,0 +1,1590 @@
+@media(min-width:768px) and (max-width:990px) {
+    .menu.active {
+        width: 260px
+    }
+
+    .menu, .menu > ul ul {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden
+    }
+
+    span.has-subnav, a.menu-link {
+        display: block;
+        line-height: 2
+    }
+
+    .sub-menu li a {
+        background-color: #fff
+    }
+
+    .navbar {
+        padding: 0;
+        z-index: 999;
+        border-radius: 0;
+        position: absolute;
+        background-color: #fff;
+        border-top: none;
+        border-bottom: none;
+        left: 0%;
+        top: 100%;
+        margin: 12px 0 0;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,.1)
+    }
+
+    a.menu-link {
+        text-align: left;
+        float: left;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 2.2;
+        border: 1px solid #999;
+        padding: 10px 8px;
+        border-radius: 5px;
+        background: #f4f4f4;
+        margin: 19px 30px 0 0
+    }
+
+        a.menu-link span {
+            margin: 0;
+            border-bottom: solid 3px #999;
+            border-top: double 10px #999
+        }
+
+    .navbar-nav {
+        margin: 0;
+        padding-top: 10px;
+        float: left;
+        text-align: left
+    }
+
+        .navbar-nav > li > a:before {
+            display: none
+        }
+
+        .navbar-nav .sub-menu {
+            border-bottom: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+            width: 100%;
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            background-color: transparent;
+            top: 0
+        }
+
+            .navbar-nav .sub-menu > li {
+                padding: 0
+            }
+
+            .navbar-nav .sub-menu li a {
+                padding: 6px 20px;
+                color: #555;
+                font-weight: 500
+            }
+
+            .navbar-nav .sub-menu .sub-menu {
+                left: 0
+            }
+
+    .navbar .navbar-collapse {
+        padding: 0
+    }
+
+    .navbar-nav > li > a {
+        float: left;
+        width: 100%;
+        padding: 15px 20px;
+        color: #555;
+        line-height: 14px
+    }
+
+    .navbar-nav > li {
+        width: 100%;
+        float: left;
+        margin: 0
+    }
+
+    .sub-menu .sub-menu {
+        left: 0
+    }
+
+    .navbar-nav > li {
+        padding: 0
+    }
+
+        .navbar-nav > li:first-child {
+            padding-left: 0
+        }
+
+    .scrapcar-main-content .col-md-4, .scrapcar-main-content .col-md-3 {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        width: 50%
+    }
+
+    .scrapcar-main-content .col-md-7, .scrapcar-main-content .col-md-5 {
+        width: 100%;
+        float: left;
+        margin-bottom: 0
+    }
+
+    .col-md-12 {
+        float: left;
+        width: 100%
+    }
+
+    .scrapcar-main-content aside.col-md-3 {
+        width: 100%
+    }
+
+    .scrapcar-top-strip-info, .scrapcar-navigation, .scrapcar-banner-quota {
+        width: 100%
+    }
+
+        .scrapcar-top-strip-info ul li, .scrapcar-top-strip .scrapcar-simple-btn, .copyright-social-icon, .scrapcar-right-section {
+            float: none;
+            display: inline-block
+        }
+
+        .scrapcar-top-strip-info ul li {
+            margin: 0 0 10px
+        }
+
+    .scrapcar-top-strip .scrapcar-right-section {
+        margin-top: 10px
+    }
+
+    .scrapcar-top-strip {
+        padding: 5px 0 1px
+    }
+
+        .scrapcar-top-strip span {
+            margin: 0 16px 33px
+        }
+
+    .scrapcar-main-header [class*=col-md-] {
+        float: left
+    }
+
+    .scrapcar-main-header .col-md-10 {
+        float: right
+    }
+
+    .scrap-fancy-btn {
+        margin: 0
+    }
+
+    .scrapcar-navigation {
+        padding: 27px 0 0
+    }
+
+    .scrap-fancy-btn {
+        margin: 17px 0 0
+    }
+
+    .scrapcar-banner-caption {
+        position: relative;
+        float: left
+    }
+
+    .scrapcar-banner-quota::before, .scrapcar-call-action-thumb {
+        display: none
+    }
+
+    .scrapcar-banner-quota {
+        margin: 20px 0 0;
+        background-color: #f76b40
+    }
+
+    .scrapcar-about-list1 {
+        margin: 0 0 30px
+    }
+
+    .scrapcar-timeline, .scrapcar-call-text, .scrapcar-about-list1, .scrapcar-video, .scrapcar-newslatter-text h2 {
+        width: 100%
+    }
+
+    .scrapcar-get-involved {
+        float: left;
+        width: 100%
+    }
+
+    .scrapcar-newslatter-text h2 {
+        margin: 0 0 20px
+    }
+
+    .scrapcar-newslatter-text {
+        text-align: center
+    }
+
+        .scrapcar-newslatter-text form {
+            float: none;
+            display: inline-block
+        }
+
+    .scrapcar-footer-widget .widget {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        width: 50%
+    }
+
+    .scrapcar-footer-widget .widget {
+        margin-bottom: 30px
+    }
+
+    .social-links {
+        padding: 0 15px
+    }
+
+    .scrapcar-error-page {
+        width: 100%
+    }
+
+    .scrapcar-main-content .widget {
+        float: none;
+        display: inline-block;
+        margin-right: -4px;
+        vertical-align: top;
+        width: 50%;
+        padding: 0 15px
+    }
+
+    .scrapcar-sidebar-colr {
+        margin: 0 0 50px
+    }
+
+    .scrapcar-blog > ul > li {
+        width: 50%
+    }
+
+    .scrapcar-detail-wrap {
+        width: 100%;
+        margin: 0;
+        padding: 30px 0 0
+    }
+
+    .scrapcar-blog.scrapcar-blog-list > ul > li {
+        width: 100%
+    }
+
+    .scrapcar-list-figure-text > h2 {
+        font-size: 22px
+    }
+
+    .scrapcar-blog-list-text figure ~ .scrapcar-list-figure-text {
+        padding-top: 0
+    }
+
+    .scrapcar-contact-wrap .col-md-3 {
+        width: 100%
+    }
+
+    .scrapcar-contact-info ul {
+        margin: 0 -15px
+    }
+
+        .scrapcar-contact-info ul li {
+            float: left;
+            width: 50%;
+            padding: 0 15px
+        }
+
+    .scrapcar-faq-tabs .nav-tabs > li {
+        width: 33.333%
+    }
+
+    .scrapcar-gallery > ul > li {
+        margin-right: -4px;
+        display: inline-block;
+        width: 50%
+    }
+
+    .scrapcar-main-content aside.col-md-4 {
+        width: 100%
+    }
+
+    .scrapcar-main-content .widget.widget_newsletter {
+        padding: 17px 20px 25px
+    }
+
+    .scrapcar-listing.scrapcar-listing-medium > ul > li {
+        width: 100%
+    }
+
+    .scrapcar-listing > ul > li {
+        width: 50%
+    }
+
+    .scrapcar-listing-medium-text strong {
+        float: left
+    }
+
+    .scrapcar-priceplan > ul > li, .scrapcar-priceplan > ul > li.active {
+        width: 50%
+    }
+
+        .scrapcar-priceplan > ul > li.left {
+            margin-right: 0
+        }
+
+        .scrapcar-priceplan > ul > li.right {
+            margin-left: 0;
+            padding-top: 0
+        }
+
+    .scrapcar-priceplan {
+        padding: 0
+    }
+
+    .scrapcar-get-quote-warp {
+        width: 100%
+    }
+
+    .scrapcar-search-form {
+        width: 93%
+    }
+
+    .scrapcar-shop-wrap .col-md-7, .scrapcar-shop-wrap .col-md-5 {
+        float: left;
+        width: 50%
+    }
+
+    .scrapcar-team-thumb {
+        display: none
+    }
+
+    .scrapcar-thumb-text h2, .scrapcar-thumb-text span, .scrapcar-team-detail-info li, .scrapcar-team-detail-info li a {
+        color: #1f2731
+    }
+
+    .scrapcar-team-detail {
+        margin: 0
+    }
+
+    .scrapcar-blog-detail {
+        margin: 0;
+        padding: 0
+    }
+
+    .scrapcar-team-info li {
+        margin-bottom: 10px
+    }
+
+    .navbar-nav .sub-menu {
+        box-shadow: none
+    }
+
+    .scrapcar-about-list1 ul li {
+        width: 33.333%
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        animation: none;
+        position: relative
+    }
+
+    .scrapcar-sticky .navbar-nav > li > a {
+        padding: 15px 20px
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        box-shadow: none
+    }
+
+    .scrapcar-sticky .logo {
+        padding: 25px 0 22px;
+        width: 100%
+    }
+
+    .scrapcar-newslatter-text form {
+        width: 100%
+    }
+
+    .scrapcar-about-works ul li {
+        width: 50%
+    }
+
+        .scrapcar-about-works ul li::before {
+            content: none
+        }
+
+    .scrapcar-about-gallery ul li {
+        margin-bottom: 15px
+    }
+
+    .scrapcar-about-gallery {
+        background-image: none;
+        padding: 0 10px
+    }
+
+    .scrapcar-copyright span {
+        margin-top: 6px
+    }
+
+    .scrapcar-banner-text {
+        top: -50%;
+        width: 100%
+    }
+}
+
+@media(max-width:767px) {
+    .menu.active {
+        width: 260px
+    }
+
+    .menu, .menu > ul ul {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden
+    }
+
+    span.has-subnav, a.menu-link {
+        display: block;
+        line-height: 2
+    }
+
+    .sub-menu li a {
+        background-color: #fff
+    }
+
+    .navbar {
+        padding: 0;
+        z-index: 999;
+        border-radius: 0;
+        position: absolute;
+        background-color: #fff;
+        border-top: none;
+        border-bottom: none;
+        left: 0%;
+        top: 100%;
+        margin: 12px 0 0;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,.1)
+    }
+
+    a.menu-link {
+        text-align: left;
+        float: left;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 2.2;
+        border: 1px solid #999;
+        padding: 10px 8px;
+        border-radius: 5px;
+        background: #f4f4f4;
+        margin: 19px 30px 0 0
+    }
+
+        a.menu-link span {
+            margin: 0;
+            border-bottom: solid 3px #999;
+            border-top: double 10px #999
+        }
+
+    .navbar-nav {
+        margin: 0;
+        padding-top: 10px;
+        float: left;
+        text-align: left
+    }
+
+        .navbar-nav > li > a:before {
+            display: none
+        }
+
+        .navbar-nav .sub-menu {
+            border-bottom: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+            width: 100%;
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            background-color: transparent;
+            top: 0
+        }
+
+            .navbar-nav .sub-menu > li {
+                padding: 0
+            }
+
+            .navbar-nav .sub-menu li a {
+                padding: 6px 20px;
+                color: #555;
+                font-weight: 500
+            }
+
+            .navbar-nav .sub-menu .sub-menu {
+                left: 0
+            }
+
+    .navbar .navbar-collapse {
+        padding: 0
+    }
+
+    .navbar-nav > li > a {
+        float: left;
+        width: 100%;
+        padding: 15px 20px;
+        color: #555;
+        line-height: 14px
+    }
+
+    .navbar-nav > li {
+        width: 100%;
+        float: left;
+        margin: 0
+    }
+
+    .sub-menu .sub-menu {
+        left: 0
+    }
+
+    .navbar-nav > li {
+        padding: 0
+    }
+
+        .navbar-nav > li:first-child {
+            padding-left: 0
+        }
+
+    .scrapcar-main-content .col-md-4, .scrapcar-main-content .col-md-3 {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        width: 50%
+    }
+
+    .scrapcar-main-content .col-md-7, .scrapcar-main-content .col-md-5 {
+        width: 100%;
+        float: left;
+        margin-bottom: 0
+    }
+
+    .col-md-12 {
+        float: left;
+        width: 100%
+    }
+
+    .scrapcar-main-content aside.col-md-3 {
+        width: 100%
+    }
+
+    .scrapcar-detail-wrap {
+        overflow: hidden
+    }
+
+    .scrapcar-top-strip-info, .scrapcar-navigation, .scrapcar-banner-quota {
+        width: 100%
+    }
+
+        .scrapcar-top-strip-info ul li, .scrapcar-top-strip .scrapcar-simple-btn, .copyright-social-icon, .scrapcar-copyright span {
+            float: none;
+            display: inline-block
+        }
+
+        .scrapcar-top-strip-info ul li {
+            margin: 0 0 10px
+        }
+
+    .scrapcar-top-strip span {
+        margin: 0 16px 33px
+    }
+
+    .scrapcar-top-strip .scrapcar-right-section {
+        margin-top: 10px;
+        float: none;
+        display: inline-block
+    }
+
+    .scrapcar-top-strip {
+        padding: 5px 0 1px
+    }
+
+    .scrapcar-main-header [class*=col-md-] {
+        float: left
+    }
+
+    .scrapcar-main-header .col-md-10 {
+        float: right
+    }
+
+    .scrap-fancy-btn {
+        margin: 0
+    }
+
+    .scrapcar-navigation {
+        padding: 27px 0 0
+    }
+
+    .scrap-fancy-btn {
+        margin: 17px 0 0
+    }
+
+    .scrapcar-banner-caption {
+        position: relative;
+        float: left
+    }
+
+    .scrapcar-banner-quota::before {
+        display: none
+    }
+
+    .scrapcar-banner-quota {
+        margin: 20px 0 0;
+        background-color: #f76b40
+    }
+
+    .scrapcar-timeline {
+        float: left;
+        width: 100%
+    }
+
+    .tab-faq-text {
+        padding: 0
+    }
+
+    .scrapcar-call-text {
+        width: 100%
+    }
+
+        .scrapcar-call-text h2 {
+            line-height: 1.3
+        }
+
+    .scrapcar-call-action-thumb {
+        display: none
+    }
+
+    .scrapcar-about-list1, .scrapcar-video, .scrapcar-get-involved {
+        width: 100%
+    }
+
+        .scrapcar-get-involved h2, .scrapcar-get-involved h2 small {
+            font-size: 30px
+        }
+
+    .scrapcar-newslatter-text h2, .scrapcar-newslatter-text form {
+        width: 100%
+    }
+
+    .scrapcar-newslatter-text h2 {
+        margin: 0 0 10px
+    }
+
+    .scrapcar-footer-widget .widget {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        width: 50%
+    }
+
+    .scrapcar-copyright {
+        text-align: center
+    }
+
+    .scrapcar-footer-widget .widget {
+        margin-bottom: 30px
+    }
+
+    .scrapcar-blog > ul > li {
+        width: 50%
+    }
+
+    .scrapcar-timeline .nav-tabs > li {
+        padding: 10px 10px 0
+    }
+
+    .scrapcar-services-classic-text {
+        padding: 77px 20px 20px
+    }
+
+    .scrapcar-about-list1 {
+        margin-bottom: 30px
+    }
+
+    .social-links {
+        padding: 0 15px
+    }
+
+    .scrapcar-copyright span {
+        vertical-align: top
+    }
+
+    .scrapcar-error-page {
+        width: 100%;
+        padding: 124px 30px 45px
+    }
+
+        .scrapcar-error-form, .scrapcar-error-page p {
+            width: 100%
+        }
+
+    .scrapcar-newslatter-text {
+        text-align: center
+    }
+
+    .scrapcar-main-content .widget {
+        float: none;
+        display: inline-block;
+        margin-right: -4px;
+        vertical-align: top;
+        width: 50%;
+        padding: 0 15px
+    }
+
+    .scrapcar-sidebar-colr {
+        margin: 0 0 50px
+    }
+
+    .scrapcar-detail-wrap {
+        width: 100%;
+        margin: 0;
+        padding: 30px 0 0
+    }
+
+    .comment-list .children {
+        padding: 0
+    }
+
+    .scrapcar-blog.scrapcar-blog-large > ul > li {
+        width: 100%
+    }
+
+    .scrapcar-blog-list-text {
+        padding: 20px
+    }
+
+        .scrapcar-blog-list-text figure {
+            width: 100%
+        }
+
+            .scrapcar-blog-list-text figure ~ .scrapcar-list-figure-text {
+                float: left;
+                margin: 0;
+                padding: 20px 0 0
+            }
+
+    .scrapcar-contact-wrap .col-md-3 {
+        width: 100%
+    }
+
+    .scrapcar-contact-info ul {
+        margin: 0 -15px
+    }
+
+        .scrapcar-contact-info ul li {
+            float: left;
+            width: 50%;
+            padding: 0 15px
+        }
+
+    .scrapcar-faq-tabs .nav-tabs > li {
+        width: 50%
+    }
+
+    .scrapcar-faq-page .panel-body {
+        padding: 15px 20px 24px
+    }
+
+    .scrapcar-gallery > ul > li {
+        margin-right: -4px;
+        display: inline-block;
+        width: 50%
+    }
+
+    .scrapcar-listing-heading h2 {
+        line-height: 1.3
+    }
+
+    .scrapcar-main-content aside.col-md-4 {
+        width: 100%
+    }
+
+    .scrapcar-main-content .widget.widget_newsletter {
+        padding-top: 5px;
+        padding-bottom: 15px
+    }
+
+    .scrapcar-listing-information .tab-content {
+        padding: 0 20px 18px
+    }
+
+    .scrapcar-listing > ul > li {
+        width: 50%
+    }
+
+    .scrapcar-listing-medium figure {
+        width: 100%
+    }
+
+        .scrapcar-listing-medium figure ~ .scrapcar-listing-medium-text {
+            margin: 0;
+            padding: 30px 0 0;
+            float: left
+        }
+
+    .scrapcar-listing-medium-text strong {
+        float: left
+    }
+
+    .scrapcar-listing-medium-text h2 {
+        line-height: 1.3
+    }
+
+    .scrapcar-priceplan > ul > li, .scrapcar-priceplan > ul > li.active {
+        width: 50%
+    }
+
+        .scrapcar-priceplan > ul > li.left {
+            margin-right: 0
+        }
+
+        .scrapcar-priceplan > ul > li.right {
+            margin-left: 0;
+            padding-top: 0
+        }
+
+    .scrapcar-priceplan {
+        padding: 0
+    }
+
+        .scrapcar-priceplan > ul > li {
+            padding: 0
+        }
+
+    .scrapcar-fancy-titlev2 h2 {
+        line-height: 1.3
+    }
+
+    .scrapcar-get-quote-warp {
+        width: 100%;
+        padding: 30px 20px 10px
+    }
+
+    .quote {
+        margin-bottom: 10px
+    }
+
+    .scrapcar-search-form {
+        width: 100%
+    }
+
+        .scrapcar-search-form label {
+            float: left
+        }
+
+        .scrapcar-search-form input[type=text] {
+            margin-bottom: 20px
+        }
+
+    .scrapcar-shop-thumb-list {
+        margin-bottom: 20px
+    }
+
+    .scrapcar-shop-tabs .nav-tabs > li {
+        margin-bottom: 0
+    }
+
+    .widget-recent2-text h2 {
+        line-height: 1
+    }
+
+    .scrapcar-shop-tabs .star-rating {
+        width: 25%
+    }
+
+    .scrapcar-team-detail {
+        margin: 0
+    }
+
+    .scrapcar-team-thumb {
+        margin: 0 0 50px
+    }
+
+    .scrapcar-thumb-text {
+        width: 100%
+    }
+
+        .scrapcar-thumb-text h2, .scrapcar-thumb-text span, .scrapcar-team-detail-info li, .scrapcar-team-detail-info li a {
+            color: #1f2731
+        }
+
+    .scrapcar-team-thumb {
+        display: none
+    }
+
+    .scrapcar-team-performance h5 {
+        line-height: 1.2
+    }
+
+    .scrapcar-team > ul > li {
+        width: 50%
+    }
+
+    .scrapcar-team-list-wrap figure {
+        width: 100%
+    }
+
+        .scrapcar-team-list-wrap figure ~ .scrapcar-team-list-text {
+            margin: 0;
+            float: left
+        }
+
+    .scrapcar-team-list-text .team-social-icone {
+        margin: 0
+    }
+
+    .scrapcar-get-involved p {
+        width: 100%
+    }
+
+    .scrapcar-blog-detail {
+        margin: 0;
+        padding: 0
+    }
+
+    .blog-heading > h2 {
+        font-size: 33px
+    }
+
+    .tab-faq-text ul li {
+        width: 50%
+    }
+
+    .navbar-nav .sub-menu {
+        box-shadow: none
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        animation: none;
+        position: relative
+    }
+
+    .scrapcar-sticky .navbar-nav > li > a {
+        padding: 15px 20px
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        box-shadow: none
+    }
+
+    .scrapcar-sticky .logo {
+        padding: 25px 0 22px;
+        width: 100%
+    }
+
+    .scrapcar-shop-filter {
+        text-align: center
+    }
+
+        .scrapcar-shop-filter .nav-tabs, .scrapcar-shop-filter form {
+            float: none;
+            display: inline-block
+        }
+
+        .scrapcar-shop-filter span {
+            margin-bottom: 10px;
+            vertical-align: top
+        }
+
+    .scrapcar-about-works ul li {
+        width: 50%
+    }
+
+        .scrapcar-about-works ul li::before {
+            content: none
+        }
+
+    .scrapcar-contact-info-text {
+        padding: 38px 20px 15px
+    }
+
+    .scrapcar-about-gallery ul li {
+        margin-bottom: 15px
+    }
+
+    .scrapcar-about-gallery {
+        background-image: none;
+        padding: 0 10px
+    }
+
+    .scrapcar-copyright span {
+        margin-top: 7px
+    }
+
+    .scrapcar-error-btn {
+        margin: 0 11px
+    }
+
+    .scrapcar-banner-image {
+        min-height: 400px
+    }
+
+    .scrapcar-banner-text {
+        top: -34%;
+        width: 100%;
+        padding: 0 30px
+    }
+}
+
+@media(max-width:480px) {
+    .scrapcar-main-header [class*=col-md-] {
+        float: left;
+        width: 100%;
+        text-align: center
+    }
+
+    .scrapcar-top-strip .scrapcar-right-section {
+        width: 100%
+    }
+
+    .scrapcar-top-strip span {
+        float: left
+    }
+
+    .scrapcar-navigation {
+        padding-top: 0
+    }
+
+    .navbar {
+        margin-top: 0
+    }
+
+    .scrapcar-top-strip span {
+        margin: 0;
+        padding-top: 9px;
+        float: left
+    }
+
+    .scrapcar-top-strip {
+        padding-bottom: 20px
+    }
+
+    .scrapcar-top-strip-info ul li:after {
+        display: none
+    }
+
+    .scrapcar-top-strip-info ul li {
+        padding-right: 16px;
+        float: left
+    }
+
+    .scrapcar-top-strip .scrapcar-simple-btn {
+        text-indent: -9999px;
+        overflow: hidden;
+        padding: 13px 29px 12px 16px;
+        float: right
+    }
+
+        .scrapcar-top-strip .scrapcar-simple-btn i {
+            margin-right: 0;
+            text-indent: 0
+        }
+
+    .scrapcar-main-content .col-md-4, .scrapcar-main-content .col-md-3, .scrapcar-main-content .col-md-6 {
+        margin-right: 0;
+        width: 100%
+    }
+
+    .scrapcar-banner-text h1 {
+        display: none
+    }
+
+    .scrapcar-banner-quota {
+        padding: 30px 20px
+    }
+
+        .scrapcar-banner-quota h2 strong {
+            font-size: 28px
+        }
+
+        .scrapcar-banner-quota h2 {
+            font-size: 20px;
+            margin: 0 0 10px
+        }
+
+        .scrapcar-banner-quota h3 {
+            font-size: 22px
+        }
+
+    .tab-faq-text ul li, .scrapcar-about-list1 ul li {
+        width: 100%
+    }
+
+    .tab-faq-form form label, .scrapcar-newslatter-text form label {
+        position: relative;
+        display: inline-block;
+        margin: 13px 0 0;
+        border-left: none
+    }
+
+    .scrapcar-call-text h2 {
+        font-size: 30px
+    }
+
+    .scrapcar-footer-widget .widget, .scrapcar-blog > ul > li, .scrapcar-main-content .widget, .scrapcar-gallery > ul > li {
+        margin-right: -4px;
+        width: 100%
+    }
+
+    .scrapcar-fancy-title h2::before, .scrapcar-fancy-title h2::after {
+        display: none
+    }
+
+    .scrapcar-error-btn {
+        margin: 0
+    }
+
+    .scrapcar-error-page h2 {
+        font-size: 120px
+    }
+
+    .scrapcar-error-page {
+        padding: 124px 20px 45px
+    }
+
+    .scrapcar-subheader-wrap {
+        text-align: center
+    }
+
+        .scrapcar-subheader-wrap h1 {
+            margin-bottom: 5px;
+            width: 100%
+        }
+
+        .scrapcar-subheader-wrap h1, .scrapcar-breadcrumb {
+            float: none;
+            display: inline-block
+        }
+
+    .scrapcar-blog-other > li {
+        float: none;
+        display: inline-block
+    }
+
+    .scrapcar-prenxt-post ul li, .comment-respond form p {
+        width: 100%
+    }
+
+    .comment-list figure ~ .text-holder.post-date {
+       
+        float: left;
+        padding: 0 0 0;
+        width: 100%;
+        margin-top: -14%;
+    }
+
+    .blog-heading > h2 {
+        font-size: 30px
+    }
+
+    .scrapcar-contact-info ul li, .scrapcar-contact-form ul li, .scrapcar-faq-tabs .nav-tabs > li {
+        width: 100%
+    }
+
+    .scrapcar-detail-filter .nav-tabs li {
+        margin: 0 21px 0 0
+    }
+
+    a.menu-link {
+        margin: 19px 0 30px
+    }
+
+    .scrapcar-listing-information .tab-content {
+        padding: 0 20px 18px
+    }
+
+    .scrapcar-main-content .widget {
+        padding: 0
+    }
+
+        .scrapcar-main-content .widget.widget_newsletter {
+            padding: 17px 20px 25px
+        }
+
+    .scrapcar-listing-amenities ul li {
+        width: 100%
+    }
+
+    .scrapcar-listing-interior span {
+        width: 50%
+    }
+
+    .scrapcar-listing-filter {
+        padding: 8px 13px 7px
+    }
+
+    .scrapcar-listing > ul > li, .scrapcar-priceplan > ul > li, .scrapcar-priceplan > ul > li.active, .scrapcar-quote-about-us > ul > li {
+        width: 100%
+    }
+
+    .scrapcar-priceplan > ul > li {
+        padding: 0
+    }
+
+    .scrapcar-quote-about-us input[type=submit] {
+        padding: 6px 30px 10px
+    }
+
+    .scrapcar-search-form input[type=text] {
+        width: 100%
+    }
+
+    .scrapcar-shop-detail-text .star-rating {
+        width: 45%
+    }
+
+    .scrapcar-number-select input[type=number] {
+        margin-bottom: 20px
+    }
+
+    .scrapcar-shop-tabs .nav-tabs > li > a {
+        padding: 8px 16px
+    }
+
+    .scrapcar-team > ul > li {
+        width: 100%
+    }
+
+    .scrapcar-search-select {
+        margin: 0
+    }
+
+        .scrapcar-search-select select, .scrapcar-shop-filter form, .scrapcar-search-select {
+            width: 100%
+        }
+
+    .scrapcar-listing-filter .scrapcar-search-select {
+        width: auto
+    }
+
+    .scrapcar-testimonial-list-layer.slick-slide.slick-current.slick-active {
+        width: 360px
+    }
+
+    .scrapcar-about-gallery ul li {
+        width: 50%
+    }
+
+    .scrapcar-about-works ul li {
+        width: 100%
+    }
+}
+
+@media screen and (min-width:991px) and (max-width:1054px) {
+    .scrapcar-footer-title {
+        line-height: 1.3
+    }
+
+    .social-links {
+        padding: 0 15px
+    }
+
+    .scrapcar-newslatter-text h2 {
+        font-size: 24px
+    }
+
+    .scrapcar-get-involved, .scrapcar-timeline {
+        width: 100%
+    }
+
+    .scrapcar-banner-quota form ul li {
+        width: 50%
+    }
+
+    .scrapcar-call-text {
+        padding: 95px 0 80px
+    }
+
+    .scrapcar-call-text, .scrapcar-call-action-thumb {
+        width: 100%
+    }
+
+    .scrapcar-banner-text, .scrapcar-banner-quota::before {
+        display: none
+    }
+
+    .scrapcar-banner-quota {
+        margin: 16px 0 0;
+        width: 100%;
+        padding: 30px 51px 29px 47px;
+        height: auto
+    }
+
+        .scrapcar-banner-quota form ul li {
+            padding: 0 15px
+        }
+
+        .scrapcar-banner-quota form ul {
+            float: none;
+            width: auto;
+            margin: 0 -15px
+        }
+
+            .scrapcar-banner-quota form ul li.submit {
+                width: 100%
+            }
+
+    .involved-social-icone ul li a {
+        width: 140px
+    }
+
+    .scrapcar-blog-detail {
+        margin: 0;
+        padding: 0
+    }
+
+    .scrapcar-detail-wrap {
+        padding: 30px 0 0
+    }
+
+    .scrapcar-list-figure-text > h2 {
+        font-size: 22px
+    }
+
+    .scrapcar-blog-list-text figure ~ .scrapcar-list-figure-text {
+        padding-top: 0
+    }
+
+    .scrapcar-contact-info-text {
+        padding: 38px 20px 15px
+    }
+
+    .scrapcar-faq-tabs .nav-tabs > li > a {
+        padding: 18px 0 22px 15px
+    }
+
+    .scrapcar-listing-medium-text strong {
+        float: left
+    }
+
+    .scrapcar-priceplan > ul > li {
+        width: 29.666%
+    }
+
+    .scrapcar-error-form {
+        width: 70%
+    }
+
+    .scrapcar-priceplan > ul > li.active {
+        width: 43.333%
+    }
+
+    .scrapcar-search-form {
+        width: 93%
+    }
+
+    .scrapcar-number-select input[type=number] {
+        margin-bottom: 20px
+    }
+
+    .scrapcar-team-detail {
+        margin: -150px 0 0
+    }
+
+    .scrapcar-thumb-text h2 {
+        font-size: 28px
+    }
+
+    .scrapcar-thumb-text span {
+        font-size: 16px
+    }
+
+    .scrapcar-team-detail-info li {
+        margin: 0 19px 0 0
+    }
+
+    .scrapcar-thumb-text span {
+        margin: 0 0 7px
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        animation: none;
+        position: relative
+    }
+
+    .scrapcar-sticky .navbar-nav > li > a {
+        padding: 15px 20px
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        box-shadow: none
+    }
+
+    .scrapcar-sticky .logo {
+        padding: 25px 0 22px;
+        width: 100%
+    }
+
+    .scrapcar-main-wrapper {
+        overflow: hidden
+    }
+
+    .scrapcar-about-works ul li::before {
+        left: 137px
+    }
+}
+
+@media screen and (min-width:991px) and (max-width:1250px) {
+    .scrapcar-footer-title {
+        line-height: 1.3
+    }
+
+    .social-links {
+        padding: 0 15px
+    }
+
+    .scrapcar-newslatter-text h2 {
+        font-size: 24px
+    }
+
+    .scrapcar-get-involved, .scrapcar-timeline {
+        width: 100%
+    }
+
+    .scrapcar-banner-quota form ul li {
+        width: 50%
+    }
+
+    .scrapcar-call-text {
+        padding: 95px 0 80px
+    }
+
+    .scrapcar-call-text, .scrapcar-call-action-thumb {
+        width: 100%
+    }
+
+    .scrapcar-banner-text, .scrapcar-banner-quota::before {
+        display: none
+    }
+
+    .scrapcar-banner-quota {
+        margin: 16px 0 0;
+        width: 100%;
+        padding: 30px 51px 29px 47px;
+        height: auto
+    }
+
+        .scrapcar-banner-quota form ul li {
+            padding: 0 15px
+        }
+
+        .scrapcar-banner-quota form ul {
+            float: none;
+            width: auto;
+            margin: 0 -15px
+        }
+
+            .scrapcar-banner-quota form ul li.submit {
+                width: 100%
+            }
+
+    .involved-social-icone ul li a {
+        width: 140px
+    }
+
+    .scrapcar-blog-detail {
+        margin: 0;
+        padding: 0
+    }
+
+    .scrapcar-detail-wrap {
+        padding: 30px 0 0
+    }
+
+    .scrapcar-list-figure-text > h2 {
+        font-size: 22px
+    }
+
+    .scrapcar-blog-list-text figure ~ .scrapcar-list-figure-text {
+        padding-top: 0
+    }
+
+    .scrapcar-contact-info-text {
+        padding: 38px 20px 15px
+    }
+
+    .scrapcar-faq-tabs .nav-tabs > li > a {
+        padding: 18px 0 22px 15px
+    }
+
+    .scrapcar-listing-medium-text strong {
+        float: left
+    }
+
+    .scrapcar-priceplan > ul > li {
+        width: 29.666%
+    }
+
+    .scrapcar-error-form {
+        width: 70%
+    }
+
+    .scrapcar-priceplan > ul > li.active {
+        width: 43.333%
+    }
+
+    .scrapcar-search-form {
+        width: 93%
+    }
+
+    .scrapcar-number-select input[type=number] {
+        margin-bottom: 20px
+    }
+
+    .scrapcar-team-detail {
+        margin: -150px 0 0
+    }
+
+    .scrapcar-thumb-text h2 {
+        font-size: 28px
+    }
+
+    .scrapcar-thumb-text span {
+        font-size: 16px
+    }
+
+    .scrapcar-team-detail-info li {
+        margin: 0 19px 0 0
+    }
+
+    .scrapcar-thumb-text span {
+        margin: 0 0 7px
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        animation: none;
+        position: relative
+    }
+
+    .scrapcar-sticky .navbar-nav > li > a {
+        padding: 15px 20px
+    }
+
+    .scrapcar-sticky .scrapcar-main-header {
+        box-shadow: none
+    }
+
+    .scrapcar-sticky .logo {
+        padding: 25px 0 22px;
+        width: 100%
+    }
+
+    .scrapcar-main-wrapper {
+        overflow: hidden
+    }
+
+    .scrapcar-about-works ul li::before {
+        left: 137px
+    }
+}

@@ -1,0 +1,89 @@
+﻿@model BusinessObject.FeedBack
+@{
+    ViewBag.Title = "FeedBack";
+}
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h2 style="color:white; font-size:28px;">FeedBack</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="scrapcar-main-content">
+
+    <div class="scrapcar-main-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="scrapcar-get-quote-warp">
+                    @if (ViewBag.Msg != "")
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+                        </div>
+                    }
+                    <h2 class="scrapcar-section-headingv2">Share Your FeedBack</h2>
+
+
+                    @using (Html.BeginForm("Index", "FeedBack", FormMethod.Post, new { @class = "scrapcar-quote-about-us" }))
+                    {
+                        @Html.HiddenFor(m => m.Id)
+                        <ul>
+                            <li>
+                                <label>Name:*</label>
+                                @Html.TextBoxFor(m => m.Name, new { @class = "", @placeholder = "Name" })
+                                @Html.ValidationMessageFor(m => m.Name, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Phone Number:</label>
+                                @Html.TextBoxFor(m => m.Contact, new { @class = "", @placeholder = "Contact Nubmer" })
+                                @Html.ValidationMessageFor(m => m.Contact, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Email Address:*</label>
+                                @Html.TextBoxFor(m => m.Email, new { @class = "", @placeholder = "Email" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Your Location:</label>
+                                @Html.TextBoxFor(m => m.Location, new { @class = "", @placeholder = "Location" })
+                                @Html.ValidationMessageFor(m => m.Location, "", new { @style = "color:red" })
+                            </li>
+
+                            @for (int i = 0; i < ViewBag.Answer; i++)
+                            {
+                                <li>
+                                    @Html.RadioButtonFor(m => Model.Select, Model.Answers[i].Id, new { @id = i })
+                                    @Html.ValidationMessageFor(m => m.Select, "", new { @style = "color:red" })
+                                    <label for="@Model.Answers[i].Name">
+                                        @Model.Answers[i].Name
+                                    </label>
+                                    <div class="@Model.Answers[i].Css form-coverage">
+                                    </div>
+                                </li>
+                            }
+                            <li><br /></li>
+
+                            @Html.TextAreaFor(m => m.Comment, new { @rows = "6", @cols = "6", @class = "form-control", @style = "height:116px;", @placeholder = "Additional Comment" })
+                            @Html.ValidationMessageFor(m => m.Comment, "", new { @style = "color:red" })
+                            <br />
+                        </ul>
+                        <input type="submit" value="Okay, Submit My FeedBack">
+                        <div style="color:red;">
+                            @ViewBag.ErrorMessage
+                        </div>
+
+                    }
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cd9d1d82-46cb-4ca5-8a99-6b069fcecaa6": {
+      "ProjectGuid": "cd9d1d82-46cb-4ca5-8a99-6b069fcecaa6",
+      "DisplayName": "MyCarService",
+      "ColorIndex": 0
+    },
+    "16d54da7-64e0-4a43-99e2-a7fa506879d5": {
+      "ProjectGuid": "16d54da7-64e0-4a43-99e2-a7fa506879d5",
+      "DisplayName": "DataLayer",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

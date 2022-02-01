@@ -1,0 +1,26 @@
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessManager.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessManager.pdb
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessObject.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\DataLayer.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessObject.pdb
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\DataLayer.pdb
+E:\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.csproj.AssemblyReference.cache
+E:\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.csproj.CoreCompileInputs.cache
+E:\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.csproj.CopyComplete
+E:\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.dll
+E:\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.pdb
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\EntityFramework.dll
+E:\My Projects\MyCarService\BusinessManager\bin\Debug\EntityFramework.xml
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessManager.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessManager.pdb
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessObject.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\DataLayer.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\EntityFramework.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\BusinessObject.pdb
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\DataLayer.pdb
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\bin\Debug\EntityFramework.xml
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.csproj.AssemblyReference.cache
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.csproj.CoreCompileInputs.cache
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.csproj.CopyComplete
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.dll
+D:\My MVC Project\My Projects\MyCarService\BusinessManager\obj\Debug\BusinessManager.pdb

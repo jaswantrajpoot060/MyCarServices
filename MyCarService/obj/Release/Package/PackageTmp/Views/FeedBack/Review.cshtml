@@ -1,0 +1,113 @@
+﻿@model MyCarService.Models.MainModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h1>Get a FeedBack</h1>
+                    <ul class="scrapcar-breadcrumb">
+                        <li><a href="/Home/Index">Home</a></li>
+                        <li>Pages</li>
+                        <li class="active">FeedBack</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="scrapcar-main-content">
+
+    <div class="row">
+        <div class="scrapcar-get-quote-warp" style="width: 92.7%;">
+            <h2 class="scrapcar-section-headingv2">Your FeedBack</h2>
+            <table class="table">
+                <tr>
+                    <th>
+                        Customer Satisfaction
+                    </th>
+
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Contact
+                    </th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        DateTime
+                    </th>
+                    <th>
+                        Comment
+                    </th>
+                </tr>
+                @{
+                    string AnswerS = "";
+                }
+                @foreach (var item in Model.FeedBackList)
+                {
+                    int s1 = item.AnswerId;
+
+                    if (s1 == 1)
+                    {
+                        AnswerS = "Excellent";
+                    }
+                    if (s1 == 2)
+                    {
+                        AnswerS = "Very Good";
+                    }
+                    if (s1 == 3)
+                    {
+                        AnswerS = "Good";
+                    }
+                    if (s1 == 4)
+                    {
+                        AnswerS = "Netural";
+                    }
+                    if (s1 == 5)
+                    {
+                        AnswerS = "Poor";
+                    }
+                    <tr>
+                        <td>
+                            @AnswerS
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedOn)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Comment)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+

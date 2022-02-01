@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DrivingSchool_DBModelStoreContainer" CdmEntityContainer="DrivingSchool_DBEntities">
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="DrivingSchool_DBModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ExtraColumn" ColumnName="ExtraColumn" />
+          <ScalarProperty Name="Signatue" ColumnName="Signatue" />
+          <ScalarProperty Name="NewExtra" ColumnName="NewExtra" />
+          <ScalarProperty Name="NewExtra2" ColumnName="NewExtra2" />
+          <ScalarProperty Name="Extra1" ColumnName="Extra1" />
+          <ScalarProperty Name="Extra2" ColumnName="Extra2" />
+          <ScalarProperty Name="Extra3" ColumnName="Extra3" />
+          <ScalarProperty Name="Extra4" ColumnName="Extra4" />
+          <ScalarProperty Name="Extra5" ColumnName="Extra5" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="DrivingSchool_DBModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

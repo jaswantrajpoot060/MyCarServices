@@ -1,0 +1,63 @@
+﻿@model MyCarService.Models.MainModel
+@{
+    ViewBag.Title = "Add Enquiry";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-10 center">
+                <section class="card">
+                    <header class="card-header">
+                        Enquiry Users
+                    </header>
+                    <div class="card-body">
+                        @using (Html.BeginForm("Enquiry", "Admin", FormMethod.Post, new { @class = "" }))
+                        {
+                            <input type="hidden" id="Id" name="Id" value="@Model.Enquiry.Id" />
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="@Model.Enquiry.Name" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Email</label>
+                                    <input type="text" class="form-control" id="email" name="email" value="@Model.Enquiry.Email" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Mobile</label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile" onkeypress="return isNumberKey(event)" value="@Model.Enquiry.Mobile" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Location</label>
+                                    <input type="text" class="form-control" id="locaton" name="locaton"value="@Model.Enquiry.Locaton" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" id="descripation" name="descripation" rows="6">@Model.Enquiry.Descripation</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/Admin/Enquiry" class="btn btn-dark"> Back</a>
+                        }
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- page end-->
+    </section>
+</section>

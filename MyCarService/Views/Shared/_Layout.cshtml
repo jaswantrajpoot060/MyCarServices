@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Art of Driving School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Art of Driving is Best Car Driving Training PlatForm" />
+    <meta name="author" content="http://artofdrivings.com/,
+          Arts of Driving School" />
+    <meta name="keywords" content="Art of Driving | Art of Driving School , Gangrpur Road , Near Wishdom Public School , Rudrapur (Uttarakhand), UK ,Contact No. +91 8826 611 517
+          Art of Driving the Way of Best Driving of Professionally ,
+          Art of Driving is Best Car Driving Training PlatForm " />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @Styles.Render("~/AllHeadercss")
+</head>
+<body>
+    <div class="scrapcar-main-wrapper">
+        <header id="scrapcar-header" class="scrapcar-header-one">
+            <div class="scrapcar-top-strip">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="scrapcar-top-strip-info">
+                                <ul>
+                                    <li><a href="/Account">How will I be learn with?</a></li>
+                                    <li><a href="Home/Service.html">Driving</a></li>
+                                    <li><a href=";;">@ViewBag.IpAddress</a></li>
+                                </ul>
+                            </div>
+                            <div class="scrapcar-right-section">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a href="/LogOff.html" class="scrapcar-simple-btn" style="background-color:black;">Sign Out </a>
+                                    <a href="javascript:void(0)" class="scrapcar-simple-btn"><i class="automechanic-icon automechanic-people"></i> @User.Identity.Name </a>
+                                }
+                                else
+                                {
+                                    <a href="/RedirectToGoogle.html" class="scrapcar-simple-btn"><i class="automechanic-icon automechanic-people"></i>Login</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scrapcar-main-header">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-md-2"> <a href="/index.html" class="logo"><img src="../assetsWeb/images/logoo.png" alt="" style="max-width:86%;"></a> </aside>
+                        <aside class="col-md-10">
+                            <div class="scrapcar-navigation">
+                                <a href="#menu" class="menu-link active"><span></span></a>
+                                <nav id="menu" class="menu navbar navbar-default">
+                                    <ul class="level-1 navbar-nav">
+                                        <li class="active"><a href="/Index.html">Home</a></li>
+                                        <li class="active"><a href="/FeedBack/Index.html">FeedBack</a></li>
+                                        @*<li class="active"><a href="/FeedBack/Review">FeedBack Review</a></li>*@
+                                        <li class="active"><a href="/Enquiry.html">Enquiry</a></li>
+                                        <li class="active"><a href="/Packages.html">Packages</a></li>
+                                        <li class="active"><a href="/ApplyNow.html">Apply Now</a></li>
+                                        <li class="active"><a href="/Contact.html">Contact</a></li>
+                                        @*@Html.Partial("_LoginPartial")*@
+                                    </ul>
+                                </nav>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        @RenderBody()
+        <hr />
+
+        <div class="scrapcar-footer-newslatter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="scrapcar-newslatter-text">
+                            @*<form id="subscribe">
+                                    <input type="hidden" id="Id" name="Id" value="" />
+                                    <input type="text" id="email" name="email" value="" placeholder="Enter your Email" style="width: 100%; margin-right: 15px;" required="">
+                                    <label><i class="fa fa-search"></i><input type="submit" value="Subscribe Now"></label>
+                                </form>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="scrapcar-footer" class="scrapcar-footer-one">
+            <div class="scrapcar-footer-widget">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-md-4 widget widget_links">
+                            <h2 class="scrapcar-footer-title">quick Links</h2>
+                            <ul>
+                                <li><a href="/About.html">About Us<i class="automechanic-icon automechanic-arrow"></i></a></li>
+                                <li><a href="/Contact.html">Contact<i class="automechanic-icon automechanic-arrow"></i></a></li>
+                                <li><a href="/FeedBack"> Get FeedBack<i class="automechanic-icon automechanic-arrow"></i></a></li>
+                                <li><a href="/ApplyNow.html">Our Services<i class="automechanic-icon automechanic-arrow"></i></a></li>
+                            </ul>
+                        </aside>
+                        <aside class="col-md-4 widget widget_appointment">
+                            <h2 class="scrapcar-footer-title">make an appointment</h2>
+                            <form>
+                                <ul>
+                                    <li><input type="email" value="E-mail Address" onblur="if(this.value == '') { this.value ='E-mail Address'; }" onfocus="if(this.value =='E-mail Address') { this.value = ''; }"></li>
+                                    <li><input type="text" value="Phone Number" onblur="if(this.value == '') { this.value ='Phone Number'; }" onfocus="if(this.value =='Phone Number') { this.value = ''; }"></li>
+                                    <li><input type="text" value="Postcode" onblur="if(this.value == '') { this.value ='Postcode'; }" onfocus="if(this.value =='Postcode') { this.value = ''; }"></li>
+                                    <li>
+                                        <label><i class="fa fa-pencil-square-o"></i></label>
+                                        <input type="submit" value="make an appointment">
+                                    </li>
+                                </ul>
+                            </form>
+                        </aside>
+                        <aside class="col-md-4 widget widget_appointment">
+                            <div class="scrapcar-contact-info-text">
+                                <i class="automechanic-icon automechanic-technology-12"></i>
+                                <h5>Call Us Now At </h5>
+                                <span style="font-weight:bold;">+91 8826 611 517</span>
+                                <a href="mailto:anandsharma9991@gmail.com"><span class="__cf_email__">anandsharma9991@gmail.com</span></a>
+                                <span>Gangrpur Road , Near Wishdom Public School , Rudrapur (Uttarakhand)</span>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <div class="scrapcar-copyright-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="scrapcar-copyright">
+                                <div class="copyright-social-icon">
+                                    <ul>
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="twitter"><a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="linkedin"><a href="https://pk.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="plus"><a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a></li>
+                                        <li class="firbox"><a href="https://dribbble.com/session/new"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                                <span>Copyright &copy; @DateTime.Now.AddHours(12).AddMinutes(30).Year</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="clearfix"></div>
+    </div>
+    @Scripts.Render("~/AllfooterJs")
+    @*<script type="text/javascript" src="script/map.js"></script>*@
+</body>
+</html>

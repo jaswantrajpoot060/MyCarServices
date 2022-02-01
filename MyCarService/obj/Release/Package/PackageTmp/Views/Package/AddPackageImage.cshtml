@@ -1,0 +1,66 @@
+﻿@model MyCarService.Models.MainModel
+@{
+    ViewBag.Title = "Add Package Image";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script type="text/javascript">
+    function showimagepreviewnew(input) {
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#imgprvw').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-4 center">
+                <section class="card">
+                    <header class="card-header">
+                        Add Package Image
+                    </header>
+                    <div class="card-body">
+                        @using (Html.BeginForm("PackageImage", "Package", FormMethod.Post, new { enctype = "multipart/form-data", @class = "" }))
+                        {
+                            <input type="hidden" id="Id" name="Id" value="@Model.PImage.Id" />
+                            <input type="hidden" id="PIId" name="PIId" value="@Model.Package.Id" />
+                            <div class="form-row">
+                                <div class="col-md-2 mb-2">
+                                    <label for="">License Image</label>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    @if (Model.PImage.Id != Guid.Empty && Model.PImage.Image != "")
+                                    {
+                                        <img src="@Url.Content(Model.PImage.Image)" alt="LicenseImg" id="imgprvw" class="imageresize" style="width: 150px; height: 150px;" />
+                                    }
+                                    else
+                                    {
+                                        <img alt="LicenseImg" id="imgprvw" class="imageresize" style="width: 100px; height: 100px; " src="../UserImage/noimagee.png" />
+                                    }
+                                    <br />
+                                    <input type="file" name="fileuploadss" id="fileuploadss" onchange="showimagepreviewnew(this)" />
+                                </div>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/Package" class="btn btn-dark"> Back</a>
+                        }
+
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div class="scrapcar-blog scrapcar-blog-grid">
+                    <div id="DataDiv">
+                        <ul class="row">
+                            @{Html.RenderPartial("~/Views/Package/_PackageImagePartail.cshtml", @Model);}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

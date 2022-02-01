@@ -1,0 +1,6 @@
+E:\My Projects\MyCarService\BusinessObject\bin\Release\BusinessObject.dll
+E:\My Projects\MyCarService\BusinessObject\bin\Release\BusinessObject.pdb
+E:\My Projects\MyCarService\BusinessObject\obj\Release\BusinessObject.csproj.AssemblyReference.cache
+E:\My Projects\MyCarService\BusinessObject\obj\Release\BusinessObject.csproj.CoreCompileInputs.cache
+E:\My Projects\MyCarService\BusinessObject\obj\Release\BusinessObject.dll
+E:\My Projects\MyCarService\BusinessObject\obj\Release\BusinessObject.pdb

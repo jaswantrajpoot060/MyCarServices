@@ -1,0 +1,168 @@
+﻿@model MyCarService.Models.MainModel
+@{
+    ViewBag.Title = "Add Apply User";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script type="text/javascript">
+    function showimagepreviewnew(input) {
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#imgprvw').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12 center">
+                <section class="card">
+                    <header class="card-header">
+                        Apply Users
+                    </header>
+                    <div class="card-body">
+                        @using (Html.BeginForm("ApplyUser", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", @class = "" }))
+                        {
+                            <input type="hidden" id="Id" name="Id" value="@Model.ApplyUser.Id" />
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">License Number</label>
+                                    <input type="text" class="form-control" id="licensenumber" name="licensenumber" value="@Model.ApplyUser.LicenseNumber" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-2">
+                                    <label for="">License Image</label>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    @if (Model.ApplyUser.Id != Guid.Empty && Model.ApplyUser.LicenseImg != "")
+                                    {
+                                        <img src="@Url.Content(Model.ApplyUser.LicenseImg)" alt="LicenseImg" id="imgprvw" class="imageresize" style="width: 150px; height: 150px;" />
+                                    }
+                                    else
+                                    {
+                                        <img alt="LicenseImg" id="imgprvw" class="imageresize" style="width: 100px; height: 100px; " src="../UserImage/noimagee.png" />
+                                    }
+                                    <br />
+                                    <input type="file" name="fileuploadss" id="fileuploadss" onchange="showimagepreviewnew(this)" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-4">
+                                    <label for=""> Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="@Model.ApplyUser.Name" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="">Gender</label>
+                                    @Html.DropDownList("drpgender", (SelectList)ViewBag.Gender, "Select Gender", new { @style = "height: 33px;", @class = "form-control" })
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="">Dob</label>
+                                    <input type="date" class="form-control" onkeyup="CalculateAge()" id="dob" name="dob" value="@Model.ApplyUser.Dob" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="">Age</label>
+                                    <input type="text" class="form-control" id="age" name="age" readonly value="@Model.ApplyUser.Age">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Email</label>
+                                    <input type="text" class="form-control" id="email" name="email" value="@Model.ApplyUser.Email" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for=""> Contact</label>
+                                    <input type="text" class="form-control" id="contact" name="contact" value="@Model.ApplyUser.Contact" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="">Alternate No</label>
+                                    <input type="text" class="form-control" id="alternateno" name="alternateno" value="@Model.ApplyUser.AlternateNo" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-8">
+                                    <label for="">Address</label>
+                                    <textarea class="form-control" id="address" name="address" rows="6">@Model.ApplyUser.Address</textarea>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="">Package Name</label>
+                                    @Html.DropDownList("drppackage", (SelectList)ViewBag.Package, "Select Package", new { @class = "form-control" })
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-2">
+                                    <label for="">Training Time</label>
+                                    <input type="time" class="form-control" id="trainingtime" name="trainingtime" value="@Model.ApplyUser.TrainingTime" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="">Status</label>
+                                    <input type="text" class="form-control" id="status" name="status" value="@Model.ApplyUser.Extra" required="">
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/Admin/ApplyUser" class="btn btn-dark"> Back</a>
+                        }
+
+                    </div>
+
+                </section>
+            </div>
+
+        </div>
+        <!-- page end-->
+    </section>
+</section>
+<script type="text/javascript">
+    function CalculateAge() {
+        var Dob = $('#dob').val();
+        $.ajax({
+            url: '/Home/GetCalculateAge',
+            dataType: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({ Dob: Dob }),
+            async: true,
+            processData: false,
+            cache: false,
+            success: FillUserDetail,
+            error: function (xhr) {
+            }
+        });
+    }
+
+    function FillUserDetail(result) {
+        debugger;
+        if (result != null) {
+            if (result.Lcount == 0) {
+                document.getElementById("#age");
+                $('#age').val(result.ApplyUser.Age);
+            }
+            else {
+            }
+        }
+    }
+
+</script>

@@ -1,0 +1,119 @@
+﻿@model BusinessObject.ApplyUser
+@{
+    ViewBag.Title = "Apply Now";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    function showimagepreviewnew(input) {
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#imgprvw').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h2 style="color:white; font-size:28px;">Apply Now</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="scrapcar-main-content">
+
+    <div class="scrapcar-main-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="scrapcar-get-quote-warp">
+                    @if (ViewBag.Msg != "")
+                    {
+                        <div class="alert alert-success">
+                            <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+                        </div>
+                    }
+                    <h2 class="scrapcar-section-headingv2">Share Your ApplyNow</h2>
+
+                    @using (Html.BeginForm("ApplyNow", "Home", FormMethod.Post, new { enctype = "multipart/form-data", @class = "scrapcar-quote-about-us" }))
+                    {
+                        @Html.HiddenFor(m => m.Id)
+
+                        <ul>
+                            <li>
+                                <label>License Image:*</label>
+                                <img alt="LicenseImg" id="imgprvw" class="imageresize" style="width: 100px; height: 100px; " src="../UserImage/noimagee.png" />
+                                <br />
+                                @Html.TextBoxFor(m => m.LicenseImg, new { type = "file", @onchange = "showimagepreviewnew(this)", @id = "fileuploadss", @name = "fileuploadss", })
+                                @Html.ValidationMessageFor(m => m.LicenseImg, "", new { @style = "color:red" })
+                                @*<input type="file" name="fileuploadss" id="fileuploadss" onchange="showimagepreviewnew(this)" />*@
+                            </li>
+                            <li>
+                                <label>License Number:*</label>
+                                @Html.TextBoxFor(m => m.LicenseNumber, new { @style = "height: 33px;", @class = "form-control", })
+                                @Html.ValidationMessageFor(m => m.LicenseNumber, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Name:*</label>
+                                @Html.TextBoxFor(m => m.Name, new { @style = "height: 33px;", @class = "form-control", })
+                                @Html.ValidationMessageFor(m => m.Name, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Gender:*</label>
+                                @Html.DropDownListFor(m => m.Gender, (SelectList)ViewBag.Gender, "Select Gender", new { @style = "height: 33px;", @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Gender, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Date of birth:*</label>
+                                @Html.TextBoxFor(m => m.Dob, new { type = "date", @style = "height: 33px;", @class = "form-control", })
+                                @Html.ValidationMessageFor(m => m.Dob, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Email:*</label>
+                                @Html.TextBoxFor(m => m.Email, new { @style = "height: 33px;", @class = "form-control", })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Phone Number:</label>
+                                @Html.TextBoxFor(m => m.Contact, new { @style = "height: 33px;", @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Contact, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label> Package Name:</label>
+                                @Html.DropDownListFor(m => m.PackageId, (SelectList)ViewBag.Package, "Select Package", new { @style = "height: 33px;", @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.PackageId, "", new { @style = "color:red" })
+                            </li>
+                            <li>
+                                <label>Address:*</label>
+                                @Html.TextBoxFor(m => m.Address, new { @Row = "7", @style = "height: 33px;", @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Address, "", new { @style = "color:red " })
+                            </li>
+                            <li>
+                                <label>Alternate No:*</label>
+                                @Html.TextBoxFor(m => m.AlternateNo, new { @style = "height: 33px;", @class = "form-control", })
+                                @Html.ValidationMessageFor(m => m.AlternateNo, "", new { @style = "color:red" })
+                            </li>
+                        </ul>
+                        <br />
+                        <input type="submit" value="Submit">
+                        <div style="color:red;">
+                            @ViewBag.ErrorMessage
+                        </div>
+
+                    }
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,74 @@
+﻿@using MyCarService.Models
+@model BusinessObject.LoginModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h1>Get a Login</h1>
+                    <ul class="scrapcar-breadcrumb">
+                        <li><a href="/Home/Index">Home</a></li>
+                        <li>Pages</li>
+                        <li class="active">Login</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="scrapcar-main-content">
+    <div class="scrapcar-main-section">
+        <div class="container">
+            <div class="row">
+                <div class="scrapcar-get-quote-warp">
+                    <h2 class="scrapcar-section-headingv2">Login Account</h2>
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        if (ViewBag.Error != "")
+                        {
+                            <h5 style="color:red;">@ViewBag.Error</h5>
+                        }
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-8">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Log in" class="btn btn-primary" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                            </div>
+                        </div>
+
+                    }
+
+                    @*<div class="col-md-4">
+                         <section id="socialLoginForm">
+                             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                         </section>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

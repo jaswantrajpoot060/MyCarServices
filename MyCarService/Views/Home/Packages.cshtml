@@ -1,0 +1,95 @@
+﻿@model MyCarService.Models.MainModel
+
+@{
+    ViewBag.Title = "Packages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+}
+<div class="scrapcar-subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scrapcar-subheader-wrap">
+                    <h2 style="color:white; font-size:28px;">Packages</h2>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="scrapcar-main-content">
+
+    <div class="scrapcar-main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="profile">
+                            <div class="scrapcar-listing scrapcar-listing-grid">
+                                <ul class="row">
+                                    @foreach (var item in Model.PackageList)
+                                    {
+
+                                        <li class="col-md-4">
+                                            <figure>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active" id="gallery">
+                                                        <div class="scrapcar-listing-gallery">
+                                                            @foreach (var item2 in Model.PImageList.Where(s => s.PakageId == item.Id))
+                                                            {
+                                                                //i++;
+                                                                //var gallery = i == 1 ? "active" : "";
+                                                                <div class="scrapcar-listing-gallery-thumb">
+                                                                    <a data-fancybox-group="group" href="@item2.Image" class="fancybox">
+                                                                        <img src="@item2.Image" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                        <div class="scrapcar-listing-gallery-list">
+                                                            @foreach (var item3 in Model.PImageList.Where(s => s.PakageId == item.Id))
+                                                            {
+                                                                <div class="scrapcar-listing-gallery-layer">
+                                                                    <span>
+                                                                        <img src="@item3.Image" alt="">
+                                                                    </span>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <div class="scrapcar-listing-grid-text">
+                                                <small>@item.Name </small>
+                                                <h2><a href="/Home/Comment.html">@item.Name</a></h2>
+                                                @*<p>
+                                                        <i class="automechanic-icon automechanic-placeholder">
+                                                        </i>Roswell, New Mexico, United States
+                                                    </p>*@
+                                                <span>&#8377;  @item.Price.ToString("0.00") @*<del>$ 1,500</del>*@ </span>
+
+                                                @ViewBag.Message
+
+                                                @if (!User.Identity.IsAuthenticated)
+                                                {
+                                                    @Html.ActionLink("Comment Now", "RedirectToGoogle")
+                                                }
+                                                else
+                                                {
+                                                    <a href="/Home/CommentNow?Id=@item.Id">Comment Now</a>
+                                                }
+
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

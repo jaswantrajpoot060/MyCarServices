@@ -1,0 +1,70 @@
+﻿@model MyCarService.Models.MainModel
+@if (ViewBag.Msg != "")
+{
+    <div class="alert alert-success">
+        <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+    </div>
+}
+<table class="display table table-bordered table-striped" id="dynamic-table">
+    <thead>
+        <tr>
+            <th>SNo</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Date Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int SNo = 0;
+        }
+        @foreach (var item in Model.SubcribesList)
+        {
+            SNo++;
+        <tr class="gradeX">
+            <td>@SNo</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Mobile</td>
+            <td>@item.DateTime</td>
+            <td>
+                <a href="/Admin/AddSubcribes?Id=@item.Id"title="Edit Detail" class="btn btn-xs purple">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0)" onclick="DeleteSubcribes('@item.Id')" class="btn btn-xs red">
+                    <i class="fa fa-times"></i>
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<script type="text/javascript">
+    function DeleteSubcribes(Id) {
+        var result = confirm('are you sure?');
+        if (result) {
+            $.ajax({
+                url: '/Admin/DeleteSubcribes',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ Id: Id}),
+                async: true,
+                processData: false,
+                cache: false,
+                success: function (data) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(data);
+                },
+                error: function (xhr) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(xhr.responseText);
+                },
+                complete: function (data) {
+                }
+            });
+        }
+    }
+</script>

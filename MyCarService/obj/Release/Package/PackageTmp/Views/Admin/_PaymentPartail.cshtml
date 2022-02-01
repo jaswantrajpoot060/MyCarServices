@@ -1,0 +1,76 @@
+﻿@model MyCarService.Models.MainModel
+@if (ViewBag.Msg != "")
+{
+    <div class="alert alert-success">
+        <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+    </div>
+}
+<table class="display table table-bordered table-striped" id="dynamic-table">
+    <thead>
+        <tr>
+            <th>SNo</th>
+            <th>Remarks</th>
+            <th>Amount Deposit </th>
+            <th>Status</th>
+            <th>Payment Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int SNo = 0;
+        }
+        @foreach (var item in Model.PaymentList)
+        {
+            SNo++;
+            <tr class="gradeX">
+                <td>@SNo</td>
+                <td>@item.Remark</td>
+                <td>@item.DopsitFee</td>
+                <td>@item.Status</td>
+                <td>@item.Date</td>
+                <td>
+                    <a href="/Admin/AddPayment?Id=@item.Id" title="Edit Detail" class="btn btn-xs purple">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="DeletePayment('@item.Id')" class="btn btn-xs red">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    @*<thead>
+            <th colspan="1">Total Amount Received</th>
+            <td>1200</td>
+            <th>Total Pending Amount</th>
+            <td>1800</td>
+        </thead>*@
+</table>
+<script type="text/javascript">
+    function DeletePayment(Id) {
+        var result = confirm('are you sure?');
+        if (result) {
+            $.ajax({
+                url: '/Admin/DeletePayment',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ Id: Id }),
+                async: true,
+                processData: false,
+                cache: false,
+                success: function (data) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(data);
+                },
+                error: function (xhr) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(xhr.responseText);
+                },
+                complete: function (data) {
+                }
+            });
+        }
+    }
+</script>

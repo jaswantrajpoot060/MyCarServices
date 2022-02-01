@@ -1,0 +1,115 @@
+﻿@model MyCarService.Models.MainModel
+
+@if (ViewBag.Msg != "")
+{
+    <div class="alert alert-success">
+        <button class="close" data-close="alert"></button> @ViewBag.MsgTitle @ViewBag.Msg
+    </div>
+}
+<table class="display table table-bordered table-striped" id="dynamic-table">
+    <thead>
+        <tr>
+            <th>SNo</th>
+            <th>
+                Customer Satisfaction
+            </th>
+
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Contact
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                DateTime
+            </th>
+            <th>
+                Comment
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int SNo = 0;
+            string AnswerS = "";
+        }
+        @foreach (var item in Model.FeedBackList)
+        {
+            int s1 = item.AnswerId;
+
+            if (s1 == 1)
+            {
+                AnswerS = "Excellent";
+            }
+            if (s1 == 2)
+            {
+                AnswerS = "Very Good";
+            }
+            if (s1 == 3)
+            {
+                AnswerS = "Good";
+            }
+            if (s1 == 4)
+            {
+                AnswerS = "Netural";
+            }
+            if (s1 == 5)
+            {
+                AnswerS = "Poor";
+            }
+            SNo++;
+            <tr class="gradeX">
+                <td>@SNo</td>
+                <td>@AnswerS</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Contact</td>
+                <td>@item.Location</td>
+                <td>@item.CreatedOn</td>
+                <td>@item.Comment</td>
+                <td>
+                    <a href="/FeedBack/AddResponse?Id=@item.Id" title="Edit Detail" class="btn btn-xs purple">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="DeleteFeedBack('@item.Id')" class="btn btn-xs red">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script type="text/javascript">
+    function DeleteFeedBack(Id) {
+        var result = confirm('are you sure?');
+        if (result) {
+            $.ajax({
+                url: '/FeedBack/DeleteFeedBack',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ Id: Id }),
+                async: true,
+                processData: false,
+                cache: false,
+                success: function (data) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(data);
+                },
+                error: function (xhr) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(xhr.responseText);
+                },
+                complete: function (data) {
+                }
+            });
+        }
+    }
+</script>

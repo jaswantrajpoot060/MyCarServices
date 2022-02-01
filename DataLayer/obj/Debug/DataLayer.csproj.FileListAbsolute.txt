@@ -1,0 +1,26 @@
+E:\My Projects\MyCarService\DataLayer\bin\Debug\DataLayer.dll
+E:\My Projects\MyCarService\DataLayer\bin\Debug\DataLayer.pdb
+E:\My Projects\MyCarService\DataLayer\bin\Debug\BusinessObject.dll
+E:\My Projects\MyCarService\DataLayer\bin\Debug\BusinessObject.pdb
+E:\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+E:\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+E:\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.dll
+E:\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.pdb
+E:\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.dll
+E:\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.xml
+E:\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\DataLayer.dll
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\DataLayer.pdb
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\BusinessObject.dll
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.dll
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\BusinessObject.pdb
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.xml
+D:\My MVC Project\My Projects\MyCarService\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\My MVC Project\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+D:\My MVC Project\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\My MVC Project\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+D:\My MVC Project\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.dll
+D:\My MVC Project\My Projects\MyCarService\DataLayer\obj\Debug\DataLayer.pdb

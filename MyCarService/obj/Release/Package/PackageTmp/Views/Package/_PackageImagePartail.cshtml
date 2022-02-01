@@ -1,0 +1,45 @@
+﻿@model MyCarService.Models.MainModel
+
+@foreach (var item in Model.PImageList)
+{
+    <li class="col-md-6">
+        <figure><img src="@item.Image" style="height: 275px; width: 275px; " alt=""></figure>
+        <div class="scrapcar-post-text">
+            <a href="/Package/AddPackageImage?Id=@item.PakageId&RowId=@item.Id" class="btn btn-primary" title="Edit Record" onclick="EditImgageItem('@item.Id')" title="Edit Detail">
+                <i class="fa fa-check"></i> Edit
+            </a>
+            <a href="javascript:void(0)" class="btn btn-dark" onclick="DeletePackageImage('@item.Id')" class="btn btn-xs red">
+                <i class="fa fa-times"></i> Delete
+            </a>
+        </div>
+    </li>
+}
+
+<script type="text/javascript">
+    function DeletePackageImage(Id) {
+        var result = confirm('are you sure?');
+        if (result) {
+            $.ajax({
+                url: '/Package/DeletePackageImage',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ Id: Id }),
+                async: true,
+                processData: false,
+                cache: false,
+                success: function (data) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(data);
+                },
+                error: function (xhr) {
+                    $('#DataDiv').empty();
+                    $('#DataDiv').append(xhr.responseText);
+                },
+                complete: function (data) {
+                }
+            });
+        }
+    }
+</script>
+
